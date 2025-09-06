@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Karla', sans-serif;
+    transition: .3s;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+
+    background: url('../images/bg.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}  
+
+.login-box{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    position: relative;
+    width: 25rem;
+    height: 30rem;
+    border-radius: .8rem;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(15px); 
+
+}
+.title{
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
+}
+.input-box{
+    width: 20rem;
+    position: relative;
+    margin: 40px 0;
+    border-bottom: 2px solid #fff;
+    
+
+}
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #fff;
+    pointer-events: none;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label{
+    top: -9px;
+}
+
+.input-box input{
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #fff;
+    padding: 0 35px 0 5px;
+    border-radius: 1.8rem;
+}
+
+.input-box .icon{
+    position: absolute;
+    right: 5px;
+    font-size: 1.2em;
+    color: #fff;
+    line-height: 57px;
+    pointer-events: none;
+}
+
+.remember-forgot{
+    margin: -15px 0 15px;
+    font-size : .9em;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.remember-forgot a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover{
+    text-decoration: underline;
+}
+
+.checkbox-container {
+  display: inline-block;
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  font-size: 18px;
+  user-select: none;
+}
+
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 6px;
+  backdrop-filter: blur(6px); 
+  -webkit-backdrop-filter: blur(6px);
+  transition: all 0.2s ease;
+}
+
+.checkbox-container:hover input ~ .checkmark {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.checkbox-container input:checked ~ .checkmark {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+/* علامت تیک */
+.checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark::after {
+  display: block;
+}
+
+.checkmark::after {
+  left: 5px;
+  top: 0;
+  width: 4px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.btn-login{
+    width: 100%;
+    height: 40px;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(6px); 
+  -webkit-backdrop-filter: blur(6px);
+    color: #fff;
+    font-size: 1em;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    
+}
+.btn-login:hover{
+    background: #fff;
+    color: #000;
+}
+.btn-login:active {
+  transform: scale(0.95);
+  filter: brightness(1.2) blur(1px);
+  box-shadow: inset 0 0 10px rgba(255,255,255,0.4);
+}
+
+.register-link{
+    margin-top: 15px;
+    text-align: center;
+    font-size: .9em;
+    color: #fff;
+}
+.register-link a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+.register-link a:hover{
+    text-decoration: underline;
+}
+
+@media (max-width: 360px){
+    .login-box{
+        width: 100%;
+        height: 100vh;
+        border: none;
+        border-radius: 0;
+    }
+    .input-box
+    {
+        width: 290px;
+    }
+}
